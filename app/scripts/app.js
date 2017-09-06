@@ -13,8 +13,15 @@
                 //controller: 'HomeCtrl as home',
                 controller: 'RoomCtrl as rooms',
                 templateUrl: '/templates/home.html'
+            })
+            .state('test', {
+                url: '/',
+                //controller: 'HomeCtrl as home',
+                //controller: 'RoomCtrl as rooms',
+                templateUrl: '/templates/test.html'
             });
     }
+    
    
      angular
          .module('blocChat', ['ui.router', 'firebase'])
