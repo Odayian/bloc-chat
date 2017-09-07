@@ -17,7 +17,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bloc-Chat</a>
+          <a class="navbar-brand" href="#" ui-sref="home">Bloc-Chat</a>
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a href="#" ui-sref="newroom">New Room</a>
+            </li>
+          </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -41,34 +46,38 @@
             <li ng-repeat= "room in rooms.roomList"><a href="#"> {{room.$value}}</a></li>
           </ul>
         </div>
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <ui-view></ui-view>
-          </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <ui-view></ui-view>
         </div>
-        </div>
+      </div>
+    </div>
         
         
   
-    
+    <script src="/js/jquery.min.js"></script>
+    <!--<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script> -->
+    <script src="/js/bootstrap.js"></script>
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!-- AngularUI Router -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <!-- FireBase -->
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
     <script>
     // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBaDeXcZG2xjPl-yQp_UJiAoD-qHpRoJb8",
-        authDomain: "odayian-bloc-chat.firebaseapp.com",
-        databaseURL: "https://odayian-bloc-chat.firebaseio.com",
-        projectId: "odayian-bloc-chat",
-        storageBucket: "",
-        messagingSenderId: "662723069412"
-    };
-    firebase.initializeApp(config);
+      var config = {
+          apiKey: "AIzaSyBaDeXcZG2xjPl-yQp_UJiAoD-qHpRoJb8",
+          authDomain: "odayian-bloc-chat.firebaseapp.com",
+          databaseURL: "https://odayian-bloc-chat.firebaseio.com",
+          projectId: "odayian-bloc-chat",
+          storageBucket: "",
+          messagingSenderId: "662723069412"
+      };
+      firebase.initializeApp(config);
     </script>
     <!-- Application Files -->
     
@@ -76,9 +85,12 @@
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
     <script src="/scripts/controllers/RoomCtrl.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/scripts/controllers/NewroomCtrl.js"></script>
+    
+    
+    
+    
+    
     
 </body>
 </html>
