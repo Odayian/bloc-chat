@@ -1,0 +1,10 @@
+<!--new room modal template -->
+<div class="bg-info">
+    <h2 class="modal-title">Create New Room</h2>
+    <form>
+        <div class="modal-body ">Enter a room name:</div>
+        <input type="text" ng-model="newRoomName"/>
+        <button ng-click="modal.cancel()">Close</button>
+        <button ng-click="modal.ok(newRoomName)">Create</button>
+    </form>
+</div>

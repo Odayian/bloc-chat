@@ -1,6 +1,6 @@
 /*global angular*/
 (function() {
-    function RoomCtrl(Room, $scope) {
+    function RoomCtrl(Room) {
         this.roomList = Room.all;
         
         this.createRoom = function(roomName){
@@ -11,6 +11,8 @@
                 console.log("Room created as "+roomName);
             }
         };
+
+        
        
     }
 

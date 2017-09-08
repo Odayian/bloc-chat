@@ -1,3 +1,4 @@
+/*global angular*/
 (function() {
   function Room($firebaseArray) {
     var Room = {};
@@ -15,6 +16,7 @@
     };
     
     return Room;
+    
   }
 
   angular
