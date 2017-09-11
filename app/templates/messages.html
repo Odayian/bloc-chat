@@ -1,0 +1,32 @@
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar" ng-controller = 'ModalCtrl as modal'>
+            <li ng-controller="ModalCtrl as modal" ng-click= "modal.openModal()" class="active"><a href="#" ui-sref="home" >Create Room<span class="sr-only">(current)</span></a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="text-center">Rooms</li>
+            <li ng-repeat= "room in house.roomList">
+              <a href="#" ng-click="house.setCurrentRoom(room)"> {{room.$value}}</a>
+            </li>
+            <li>
+              Debug UID: {{house.currentRoom.$id}}
+            </li>
+          </ul>
+        </div>
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <div class="chatroom">
+                  <div class="room-title">
+                      <h1 >{{house.currentRoom.$value}}</h1>
+                  </div>
+                  <div class="row conversation" ng-repeat="message in house.messages"> 
+                      <span class="col">{{message.username}}</span>
+                      <span class="col">{{message.content}}</span>
+                  </div>
+                  <div>
+                      
+                  </div>
+              </div>
+         </div>
+        </div>
+    </div>

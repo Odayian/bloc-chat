@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/dashboard.css"/>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<body>
+<body  >
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bloc-Chat</a>
+          <a class="navbar-brand" href="#" ui-sref="home">Bloc-Chat</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -32,23 +32,8 @@
         </div>
       </div>
     </nav>
+<ui-view></ui-view>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar" ng-controller = 'ModalCtrl as modal'>
-            <li ng-controller="ModalCtrl as modal" ng-click= "modal.openModal()" class="active"><a href="#" ui-sref="home" >Create Room<span class="sr-only">(current)</span></a></li>
-          </ul>
-          <ul class="nav nav-sidebar" ng-controller="RoomCtrl as rooms">
-            <li class="text-center">Rooms</li>
-            <li ng-repeat= "room in rooms.roomList"><a href="#"> {{room.$value}}</a></li>
-          </ul>
-        </div>
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <ui-view></ui-view>
-          </div>
-        </div>
-        </div>
         
         
   
@@ -77,13 +62,15 @@
     </script>
     <!-- Application Files -->
     <!--<script src="/js/bootstrap.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/services/Message.js"></script>
     <script src="/scripts/controllers/RoomCtrl.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
+    
     
     
 </body>
