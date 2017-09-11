@@ -10,22 +10,10 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                //controller: 'HomeCtrl as home',
                 controller: 'RoomCtrl as house',
                 templateUrl: '/templates/messages.html'
             });
-            // .state('test', {
-            //     url: '/',
-            //     //controller: 'HomeCtrl as home',
-            //     //controller: 'RoomCtrl as rooms',
-            //     templateUrl: '/templates/test.html'
-            // })
-            // .state('messages', {
-            //     url: '/',
-            //     //controller: 'HomeCtrl as home',
-            //     //controller: 'RoomCtrl as house',
-            //     templateUrl: '/templates/messages.html'
-            // });
+
 
     }
     

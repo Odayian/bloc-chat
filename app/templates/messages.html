@@ -9,9 +9,6 @@
             <li ng-repeat= "room in house.roomList">
               <a href="#" ng-click="house.setCurrentRoom(room)"> {{room.$value}}</a>
             </li>
-            <li>
-              Debug UID: {{house.currentRoom.$id}}
-            </li>
           </ul>
         </div>
           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -23,9 +20,11 @@
                       <span class="col">{{message.username}}</span>
                       <span class="col">{{message.content}}</span>
                   </div>
-                  <div>
-                      
-                  </div>
+                  <footer>
+                    <form ng-submit="house.sendMessage()">
+		                  <input type="text" ng-model="house.newMessage">
+	                  </form>
+                  <footer>
               </div>
          </div>
         </div>

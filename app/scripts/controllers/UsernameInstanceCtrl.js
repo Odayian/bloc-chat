@@ -15,10 +15,6 @@
             }
             
         };
-        //closes instance w/ log 
-        // this.cancel = function(){
-        //     $uibModalInstance.dismiss("user cancel");
-        // };
     }
 
     angular
