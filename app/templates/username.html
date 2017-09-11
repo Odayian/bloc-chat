@@ -1,0 +1,10 @@
+<!--new username modal template -->
+<div class="bg-info">
+    <h2 class="modal-title">Create a Username</h2>
+    <form>
+        <div class="modal-body ">Enter a username:</div>
+        <input type="text" ng-model="newUsername"/>
+        <!--<button ng-click="modal.cancel()">Close</button>-->
+        <button ng-click="modal.ok(newUsername)">Create</button>
+    </form>
+</div>
